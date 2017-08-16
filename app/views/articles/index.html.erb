@@ -1,0 +1,14 @@
+<div class="contents_all">
+  <h1>記事一覧</h1>
+  <% @articles.each do |article| %>
+    <div class="contents_post">
+      <div class="title">
+        タイトル：<%=article.title%>
+      </div>
+      <div class="description">
+        内容：
+        <%=article.description%>
+      </div>
+    </div>
+  <%end%>
+</div>

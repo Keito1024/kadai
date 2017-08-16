@@ -1,0 +1,43 @@
+.contents_row{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  background-color: lightgrey;
+  padding: 30px;
+  input{
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 60%;
+    height:35px;
+    border-radius: 0%;
+    font-size:15px;
+  }
+  textarea{
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 60%;
+    border-radius: 1%;
+    font-size: 13px;
+  }
+}
+.contents_all{
+  width: 80%;
+  background: gray;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  h1{
+    text-align: center;
+  }
+  .contents_post{
+    background-color: white;
+    text-align: center;
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+    .title{
+      border-bottom: 2px solid;
+    }
+  }
+}

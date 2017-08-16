@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    @articles = Article.all.includes(:user)
     # @title = @articles.title
     # @description = @article.description
   end

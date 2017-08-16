@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  # before_action :move_to_index
 
   def index
     @articles = Article.all.includes(:user)
@@ -10,7 +11,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @articles = Article.create(article_params)
+    current_user.articles.create(article_params)
   end
 
   def show
@@ -36,6 +37,10 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.permit(:title,:description,:category_id,:category_name)
+    params.permit(:title,:description)
   end
+
+  # def move_to_index
+  #   redirect_to action: :index
+  # end
 end

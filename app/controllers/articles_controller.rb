@@ -1,10 +1,7 @@
 class ArticlesController < ApplicationController
-  # before_action :move_to_index
 
   def index
     @articles = Article.all.includes(:user)
-    # @title = @articles.title
-    # @description = @article.description
   end
 
   def new
@@ -39,8 +36,4 @@ class ArticlesController < ApplicationController
   def article_params
     params.permit(:title,:description)
   end
-
-  # def move_to_index
-  #   redirect_to action: :index
-  # end
 end

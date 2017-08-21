@@ -1,16 +1,12 @@
-<div class="contents_row">
-  <div class="contents_post clearfix">
-    <div class="project">
-      <div class="project-card-wrap">
-        <div class="project-card">
-          <div class="project-thumbnail">
-          </div>
-          <p>タイトル：<%= @articles.title %></p>
-          <p>内容：<%= @articles.description %></p>
-        </div>
-        <p>投稿者：<%=@articles.user.name%></p>
-        <p>投稿日時：<%= @articles.created_at.strftime("%Y年%m月%d日 %H時%M分")%></p>
-      </div>
-    </div>
-  </div>
+<div class="content_title">
+  <p>タイトル：<%= @articles.title %></p>
+</div>
+<div class="content_description">
+  <p>内容：<%= @articles.description %></p>
+</div>
+<div class="publisher">
+  <p>投稿者：<%=@articles.user.name%></p>
+</div>
+<div class="date">
+  <p>投稿日時：<%= @articles.created_at.strftime("%Y年%m月%d日 %H時%M分")%></p>
 </div>

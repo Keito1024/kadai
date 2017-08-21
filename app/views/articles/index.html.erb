@@ -2,7 +2,6 @@
   <h1>記事一覧</h1>
   <% @articles.each do |article| %>
     <div class="contents_post">
-      <%= link_to "トークを覗く",  "/articles/#{article.id}", method: :get %>
       <div class="title">
         タイトル：<%=article.title%>
       </div>
@@ -13,6 +12,7 @@
         内容：
         <%=article.description%>
       </div>
+      <p class="detail_content"><%= link_to "トークを覗く",  "/articles/#{article.id}", method: :get %></p>
     </div>
   <%end%>
 </div>

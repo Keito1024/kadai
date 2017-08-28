@@ -1,0 +1,18 @@
+<div class="contents_all">
+  <h1>記事一覧</h1>
+  <% @articles.each do |article| %>
+    <div class="contents_post">
+      <div class="title">
+        タイトル：<%=article.title%>
+      </div>
+      <div class="description">
+        投稿者：<%=article.user.name%>
+      </div>
+      <div class="description">
+        内容：
+        <%=article.description%>
+      </div>
+      <p class="detail_content"><%= link_to "トークを覗く",  "/articles/#{article.id}", method: :get %></p>
+    </div>
+  <%end%>
+</div>
